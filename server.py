@@ -3,8 +3,14 @@ import sqlite3
 import os 
 
 
+
 app=Flask(__name__)
 
+def connect_db():
+    db=sqlite3.connect('portfolio_project.db')
+    db.execute('CREATE TABLE IF NOT EXISTS Pages (site_id INTEGER PRIMARY KEY, site_name TEXT, site_description TEXT, site_image TEXT)')
+    db.close()
+connect_db()
 
 @app.route('/')
 @app.route('/home')

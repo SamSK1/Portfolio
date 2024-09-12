@@ -1,4 +1,20 @@
 {% extends 'base.html' %}
     {%block content%}
-    <h1>Home page</h1>
+    <div class="home_page_main_div" >
+        <div class="module">
+    <h1 style="margin: auto; text-align: center; margin-top: 1rem; font-size: 4rem;">Welcome!</h1>
+    <div class="row" style="margin-top: 3rem; text-align: center;">
+        <div class="col" >
+            <p style="font-size: 4rem;" class="Test_Dev_text">Test Engineer and Python Developer</p><br><br><br>
+            
+            
+            <p style="font-size: 1.7rem;">Here, you’ll find a showcase of my work, of different apps, websites, APIs ,etc, each reflecting my commitment to quality and attention to detail.
+
+            Explore my journey, see what I’ve been up to, and feel free to connect. I’m excited to collaborate and create something amazing together!
+            </p>
+        </div>
+        <div class="col" style="text-align: center;">
+            <img src="{{ url_for('static', filename='assets/mainpage_img.jpg') }}" class="image"  style="width:25vw; height: 25vw; margin: 0;"   >
+        </div>
+      </div>
     {%endblock%}
