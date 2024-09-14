@@ -12,6 +12,7 @@
     /* color: white; */
     padding: 2rem;
     color: aliceblue;
+    background-color: #2f2f32;
   }
 
 .home_page_main_div{
@@ -43,6 +44,10 @@
      border-width: 4px;
   border-style: solid;
   border-image: linear-gradient(90deg, rgba(3,1,50,0.7868967777540704) 2%, rgba(0,255,80,0.7812945368577118) 42%, rgba(9,9,121,0.7336754892386642) 75%, rgba(9,117,121,1) 92%) 2;
+}
+#card_border:hover{
+  
+  border: green 1px solid;
 }
 /* @media screen and (max-width:1000px) {
   

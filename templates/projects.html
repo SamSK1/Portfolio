@@ -3,22 +3,32 @@
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
  <body style="background-color: #0f0f0f;">
  <h1 style="font-family: monospace; text-align: center; margin-top: 3rem; font-size: 4rem; color: aliceblue;">Projects List</h1>
- <div class="row" style="margin: 0px;">
-    {% for project in projects_arr  %}
-    <div class="col-sm-3" style="margin-bottom: 2rem; margin-top: 1rem; margin-right: 1rem;">
-      <div class="card" style="text-align: center;">
+ <div class="row " style="margin: 0%;" >
+    {% for project in projects_arr %}
+    <div class="col-md-4" style="margin: 0; margin-top: 1rem;" id="card_border" >
+      
+       <!-- <div class="col-md-auto"> -->
+        <a href={{project.site_link}}>
+        <div class="card" style="text-align: center; background-color: rgb(44, 45, 44); color: aliceblue;" >
+        
         <img src="{{ url_for('static', filename=project['site_image']) }}" alt="Site Image" style="width: 15rem; height: 10rem; margin: auto;">
         <div class="card-body">
           <h5 class="card-title" >{{project.site_name}}</h5>
           
             <p class="card-text">{{project.site_description}}</p>
             
-          
+          <!-- {% if project.site_id%3==0 %}
+          <div class="w-100"></div>
+          {%endif%} -->
         </div>
       </div>
+    </a>
     </div>
-    {%endfor%}
     
-</div>
+    {%endfor%}
+
+    
+    
+
 </body>
  {%endblock%}

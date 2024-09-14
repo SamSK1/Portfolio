@@ -8,7 +8,7 @@ app=Flask(__name__)
 
 def connect_db():
     db=sqlite3.connect('portfolio_project.db')
-    db.execute('CREATE TABLE IF NOT EXISTS Pages (site_id INTEGER PRIMARY KEY, site_name TEXT, site_description TEXT, site_image TEXT)')
+    db.execute('CREATE TABLE IF NOT EXISTS Pages (site_id INTEGER PRIMARY KEY, site_name TEXT, site_description TEXT, site_image TEXT,site_link TEXT)')
     db.close()
 connect_db()
 
@@ -27,9 +27,10 @@ def add_project():
         site_name=data['site_name']
         site_description=data['site_description']
         site_image=data['site_image']
+        site_link=data['site_link']
         with sqlite3.connect('portfolio_project.db') as db:
             cursor=db.cursor()
-            cursor.execute('INSERT INTO Pages (site_name,site_description,site_image) VALUES (?,?,?)',(site_name,site_description,site_image))
+            cursor.execute('INSERT INTO Pages (site_name,site_description,site_image,site_link) VALUES (?,?,?,?)',(site_name,site_description,site_image,site_link))
             db.commit()
             message=f'Project {site_name} has been added'
     except Exception as e:
@@ -45,9 +46,10 @@ def update_project(site_id):
         site_name=data.get('site_name')
         site_description=data.get('site_description')
         site_image=data.get('site_image')
+        site_link=data.get('site_link')
         with sqlite3.connect('portfolio_project.db') as db:
             cursor=db.cursor()
-            cursor.execute('''UPDATE Pages SET site_name=?, site_description=?, site_image=? WHERE site_id=?  ''',(site_name,site_description,site_image,site_id))
+            cursor.execute('''UPDATE Pages SET site_name=?, site_description=?, site_image=?, site_link=? WHERE site_id=?  ''',(site_name,site_description,site_image,site_link,site_id))
             db.commit()
             if cursor.rowcount==0:
                 return jsonify('Error: Not found '),404
@@ -70,10 +72,15 @@ def projects_page():
         return jsonify("Error: "+str(e))
     
     for i in projects_arr:
-        print(dict(i))
+        link=i['site_link']
     
 
     return render_template('projects.html',projects_arr=projects_arr)
+
+@app.route('/under_construction')
+def under_construction():
+    return render_template('under_construction.html')
+
 
 
 @app.route('/contact_info')
