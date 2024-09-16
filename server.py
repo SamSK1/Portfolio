@@ -1,5 +1,6 @@
 from flask import Flask,jsonify,request,session,render_template,send_file
 import sqlite3
+from waitress import serve
 import os 
 
 
@@ -105,4 +106,5 @@ def contact_page():
     return render_template('contact_info.html')
 
 if __name__=='__main__':
-    app.run(debug=True)
+    serve(app,host="0.0.0.0", port=5000)
+    # app.run(debug=True)

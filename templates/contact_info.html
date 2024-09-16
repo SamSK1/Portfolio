@@ -1,36 +1,67 @@
 {%extends 'base.html'%}
     {%block content%}
-    <h1 style="text-align: center; margin-top:1rem ;">Contact info</h1>
+    <h1 style="text-align: center; margin-top:1rem; font-family: monospace;">Contact info</h1>
     
-    
-            
-            <a
-            data-mdb-ripple-init
-            class="btn text-white btn-floating m-1"
-            style="background-color: #dd4b39;"
-            href="mailto:sskurikhin3@gmail.com"
-            role="button"
-            ><i class="fab fa-google"></i
-          ></a>
-
-          <a
-            
-            class="btn text-white btn-floating m-1"
-            style="background-color: #0082ca;"
+    <div style="width: 50%;text-align:center;margin:auto; font-family: monospace;" >
+    <div class="row" style=" padding: 0% ;width: 100%; ">
+        <div class="col-sm" style="padding: 0; font-size: 1.4rem; text-align: center;margin-top: 2rem; font-size: 3rem;">
+            <b>My Linkedin</b>
+        </div>
+        <div class="col-sm" style="padding: 0; font-size: 1.4rem;  font-size: 5rem; align-items: left;">
+            <a style="color: #0082ca;"
             href="https://www.linkedin.com/in/sam-s-465558211/"
-            role="button"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-
-          <a
-            class="btn text-white btn-floating m-1"
-            style="background-color: #333333;"
-            href="https://github.com/SamSK1"
-            role="button"
-            ><i class="fab fa-github"></i
-          ></a>
+            role="button"><i class="fa-brands fa-linkedin" ></i></a>
+        </div>
+        
+      </div>
         
 
+      <hr width="100%" size="4">
+
+      <div class="row" style=" padding: 0% ;width: 100%; font-family: monospace;">
+        <div class="col-sm" style="padding: 0; font-size: 1.4rem; text-align: center;margin-top: 2rem; font-size: 3rem;">
+            <b>My GitHub</b>
+        </div>
+        <div class="col-sm" style="padding: 0; font-size: 1.4rem;font-size: 5rem; align-items: left;">
+            <a style="color: #333333;"
+            href="https://github.com/SamSK1"
+            role="button"><i class="fa-brands fa-github"></i></a>
+        </div>
+        
+      </div>
+        
+
+      <hr width="100%" size="4">
+
+
+      <div class="row" style=" padding: 0% ;width: 100%; font-family: monospace;">
+        <div class="col-sm" style="padding: 0; font-size: 1.4rem; text-align: center;margin-top: 2rem; font-size: 3rem;">
+            <b>My Email</b>
+        </div>
+        <div class="col-sm" style="padding: 0; font-size: 1.4rem;  font-size: 5rem; align-items: left;">
+            <a style="color: #dd4b39;"
+            href="mailto:sskurikhin3@gmail.com"
+            role="button"><i class="fab fa-google"></i
+                ></a>
+        </div>
+        
+      </div>
+        
+
+      <hr width="100%" size="4">
+      <div class="row" style="text-align: center; margin-bottom: 2rem;">
+        <div class="col-sm" style="padding-top: 1.5rem; font-size: 1.4rem;">
+            <form action="/download_pdf" method="GET">
+            <button type="submit" class="btn btn-danger" style="font-size:1.7rem ; " >PDF <i class="fa-solid fa-file-pdf"></i></button>
+        </form>
+        </div>
+        <div class="col-sm" style="padding-top: 1.5rem; font-size: 1.4rem;">
+            <form action="/download_word" method="GET">
+            <button type="submit" class="btn btn-primary" style="font-size:1.7rem ;">Word <i class="fa-solid fa-file-word"></i></button>
+        </form>
+        </div>
+        
       </div>
 
+    </div>
     {%endblock%}
