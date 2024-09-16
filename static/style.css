@@ -47,7 +47,7 @@
 }
 #card_border:hover{
   
-  border: green 1px solid;
+  border: green 0.2rem solid;
 }
 /* @media screen and (max-width:1000px) {
   
@@ -55,3 +55,8 @@
       margin-bottom: 5rem;
   }
 } */
+
+#meta_icon{
+  width: 6rem;
+  /* padding-bottom: 2rem; */
+}

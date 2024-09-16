@@ -1,4 +1,4 @@
-from flask import Flask,jsonify,request,session,render_template
+from flask import Flask,jsonify,request,session,render_template,send_file
 import sqlite3
 import os 
 
@@ -81,6 +81,23 @@ def projects_page():
 def under_construction():
     return render_template('under_construction.html')
 
+
+@app.route('/cv_page')
+def cv_page():
+    return render_template('cv_page.html')
+
+@app.route('/download_pdf')
+def download_pdf():
+    file_path='static/assets/Sam_Skurikhin_Resume.pdf'
+    
+    return send_file(file_path, as_attachment=True)
+
+
+@app.route('/download_word')
+def download_word():
+    file_path='static/assets/Sam_Skurikhin_Resume.docx'
+    
+    return send_file(file_path, as_attachment=True)
 
 
 @app.route('/contact_info')
