@@ -37,17 +37,10 @@
   border: solid rgb(255, 255, 255);
 }
 
-.Test_Dev_text:hover{
-    /* background: rgb(3,1,50); */
-    /* background-image: linear-gradient(90deg, rgba(3,1,50,0.7868967777540704) 2%, rgba(0,255,80,0.7812945368577118) 42%, rgba(9,9,121,0.7336754892386642) 75%, rgba(9,117,121,1) 92%);
-     */
-     border-width: 4px;
-  border-style: solid;
-  border-image: linear-gradient(90deg, rgba(3,1,50,0.7868967777540704) 2%, rgba(0,255,80,0.7812945368577118) 42%, rgba(9,9,121,0.7336754892386642) 75%, rgba(9,117,121,1) 92%) 2;
-}
+
 #card_border:hover{
   
-  border: green 0.2rem solid;
+  box-shadow: 5px 5px 10px 2px rgba(233, 237, 237, 0.996);
 }
 /* @media screen and (max-width:1000px) {
   
@@ -59,4 +52,44 @@
 #meta_icon{
   width: 6rem;
   /* padding-bottom: 2rem; */
+}
+.employment{
+  width: 55rem;
+}
+.job_and_title{
+  font-weight: bold;
+}
+#tab2-tab{
+  margin-left: 5rem;
+}
+#tab1-ta{
+  margin-right: 5rem;
+}
+@media  screen{
+  .image{
+    width: 200px;
+    height: 200px;
+  }
+  .image:hover{
+    width: 200px;
+    height: 200px;
+    border-radius: 40%;
+  margin-bottom: 2rem;
+  border: solid rgb(255, 255, 255);
+  }
+  #myTabContent{
+    text-align: center;
+  }
+  #tab1-tab{
+    margin-right: 0%;
+  }
+  #tab2-tab{
+    margin-left: 0px;
+  }
+  .employment{
+    width: 100%;
+  }
+  .education{
+    text-align: center;
+  }
 }

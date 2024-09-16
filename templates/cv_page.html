@@ -6,11 +6,11 @@
         <!-- Tabs navigation -->
         <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist" style="font-family: monospace;" >
             <li class="nav-item" role="presentation" style="font-size: 2rem;">
-                <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true" style="margin-right: 5rem;">Testing</a>
+                <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true" >Testing</a>
 
             </li>
             <li class="nav-item" role="presentation" style="font-size: 2rem;">
-                <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false" style="margin-left: 5rem;">Developing</a>
+                <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false" >Developing</a>
                 
             </li>
         </ul>
@@ -20,7 +20,7 @@
                 <p style="margin-top: 2rem; font-size: 2rem;"><b>Career: </b></p>
 
 
-                <p style="font-size: 1.5rem; margin-bottom: 0;">Meta - QA Test Analyst</p>
+                <p style="font-size: 1.5rem; margin-bottom: 0;" class="job_and_title">Meta - QA Test Analyst</p>
                 
             <div class="row">
                 <div class="col-sm" style="padding-top: 1.5rem; font-size: 1.4rem;">
@@ -34,8 +34,8 @@
                 </div>
               </div>
 
-                <div>
-                <p style="font-size: 1.4rem; width: 55rem;">Employed at META to work on cutting-edge VR technologies, specifically 
+                <div class="employment">
+                <p style="font-size: 1.4rem; ">Employed at META to work on cutting-edge VR technologies, specifically 
                     performing embedded testing for the META Quest product line, ensuring 
                     product quality and innovation.</p>
                     <ul style="font-size: 1.4rem; font-family: monospace;">
@@ -52,7 +52,7 @@
                     
                     <hr width="100%" size="4">
 
-                    <p style="font-size: 1.5rem; margin-bottom: 0;">Huawei Technologies Switzerland - Backend Test Engineer</p>
+                    <p style="font-size: 1.5rem; margin-bottom: 0;" class="job_and_title">Huawei Technologies Switzerland - Backend Test Engineer</p>
                 
             <div class="row">
                 <div class="col-sm" style="padding-top: 1.5rem; font-size: 1.4rem;">
@@ -66,8 +66,8 @@
                 </div>
               </div>
 
-                <div>
-                <p style="font-size: 1.4rem; width: 55rem;">Worked on a high-profile project for Huawei in collaboration with Sunrise, 
+                <div class="employment">
+                <p style="font-size: 1.4rem; ">Worked on a high-profile project for Huawei in collaboration with Sunrise, 
                     Microsoft, and Nokia. </p>
                     <ul style="font-size: 1.4rem; font-family: monospace;">
                     <li>Conducted comprehensive end-to-end testing and ETL testing, ensuring 
@@ -83,7 +83,7 @@
                     </div>
 
 
-                    <p style="font-size: 1.5rem; margin-bottom: 0;">Tillo.App - Test Automation Engineer</p>
+                    <p style="font-size: 1.5rem; margin-bottom: 0;" class="job_and_title">Tillo.App - Test Automation Engineer </p>
                 
             <div class="row">
                 <div class="col-sm" style="padding-top: 1.5rem; font-size: 1.4rem;">
@@ -97,13 +97,13 @@
                 </div>
               </div>
 
-                <div>
-                <p style="font-size: 1.4rem; width: 55rem;">Contributed to an innovative agricultural start-up developing a cross
+                <div class="employment">
+                <p style="font-size: 1.4rem; ">Contributed to an innovative agricultural start-up developing a cross
                     platform application for data harvesting and visualization. </p>
                     <ul style="font-size: 1.4rem; font-family: monospace;">
                     <li>Developed and prepared testing scripts using the Selenium framework 
                         with Python. </li>
-                        <li>Executed automated test scenarios to ensure the functionality.</li>
+                    <li>Executed automated test scenarios to ensure the functionality.</li>
                        
                     </ul>
                     <hr width="100%" size="4">
@@ -312,8 +312,10 @@
             </div>
         </div>
         <div style="font-family: monospace;">
+            
         <p style="margin-top: 2rem; font-size: 2rem; "><b>Education: </b></p>
-        <p style="font-size: 1.5rem; margin-bottom: 0;">University of Plymouth</p>
+        <div class="education">
+        <p style="font-size: 1.5rem; margin-bottom: 0;" class="job_and_title"> University of Plymouth</p>
                 
             <div class="row">
                 <div class="col-sm" style="padding-top: 1.5rem; font-size: 1.4rem;">
@@ -326,11 +328,11 @@
                     <img src="{{ url_for('static', filename='assets/plymouth.png') }}"  id="meta_icon">
                 </div>
               </div>
-              <p style="font-size: 1.4rem; width: 55rem;"><b>Bachelor of Science</b> in Business 
+              <p style="font-size: 1.4rem; "><b>Bachelor of Science</b> in Business 
                 Management</p>
               <hr width="100%" size="4">
 
-              <p style="font-size: 1.5rem; margin-bottom: 0;">International University in Geneva</p>
+              <p style="font-size: 1.5rem; margin-bottom: 0;" class="job_and_title">International University in Geneva</p>
                 
             <div class="row">
                 <div class="col-sm" style="padding-top: 1.5rem; font-size: 1.4rem;">
@@ -343,8 +345,8 @@
                     <img src="{{ url_for('static', filename='assets/IUG.webp') }}"  id="meta_icon">
                 </div>
               </div>
-              <p style="font-size: 1.4rem; width: 55rem;"><b>Bachelor of Science</b> in Computer Science</p>
-              
+              <p style="font-size: 1.4rem; "><b>Bachelor of Science</b> in Computer Science</p>
+            </div>
             </div>
             <div style="font-family: monospace; margin-bottom: 1rem;">
                 <p style="margin-top: 2rem; font-size: 2rem; "><b>Languages: </b></p>
